@@ -1,0 +1,27 @@
+
+<div class="container w-50"> 
+  <h2 style="color: pink"><%= @restaurant.name.capitalize %></h2>
+
+  <div  class=''>
+    <div class="d-flex">
+      <i class="fa-solid fa-location-dot"></i><%= @restaurant.address %>
+    </div>
+  <p><%= @restaurant.phone_number %></p>
+  <p><%= @restaurant.category %></p>
+  </div>
+
+  <div class="btn btn-group" style="text-decoration: none;">
+    <%= link_to "Back to restaurants", restaurants_path %>
+  </div>
+
+  <div class="btn link btn-group" style="text-decoration: none;">
+  <%= link_to "add Review", new_restaurant_review_path(@restaurant) %>
+  </div>
+
+  <ol>
+    <% @restaurant.reviews.each do |review| %>
+      <li><%= review.content %>
+      <%= review.rating %></li>
+    <% end %>
+  </ol>
+</div>
