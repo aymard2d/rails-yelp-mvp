@@ -7,4 +7,11 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+    # root "articles#index"
+    resources :restaurants, only: [:index, :show, :new, :create] do # génère les 7 routes du crud
+  
+      # GET restaurants/:restaurant_id/reviews/new
+      # POST restaurants/:restaurant_id/reviews
+      resources :reviews, only: [:new, :create]
+    end
 end
