@@ -6,8 +6,8 @@
     <div class="d-flex">
       <i class="fa-solid fa-location-dot"></i><%= @restaurant.address %>
     </div>
-  <p><%= @restaurant.phone_number %></p>
-  <p><%= @restaurant.category %></p>
+    <p><%= @restaurant.phone_number %></p>
+    <p><%= @restaurant.category %></p>
   </div>
 
   <div class="btn btn-group" style="text-decoration: none;">
@@ -15,7 +15,7 @@
   </div>
 
   <div class="btn link btn-group" style="text-decoration: none;">
-  <%= link_to "add Review", new_restaurant_review_path(@restaurant) %>
+    <%= link_to "add Review", new_restaurant_review_path(@restaurant) %>
   </div>
 
   <ol>
